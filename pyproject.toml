@@ -1,0 +1,20 @@
+[project]
+name = "opensky-pipeline"
+version = "0.1.0"
+description = "Scheduled ETL that pulls live ADS-B aircraft states from the OpenSky API and loads them into PostgreSQL with deduplication, retry/backoff on rate limits, and logging."
+authors = [
+    { name = "Nestor-Dzadzamia", email = "ndzad22@freeuni.edu.ge" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "psycopg[binary]>=3.3.6",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+opensky-pipeline = "opensky_pipeline:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
