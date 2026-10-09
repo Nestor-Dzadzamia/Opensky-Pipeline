@@ -16,8 +16,7 @@ TOKEN_URL = "https://auth.opensky-network.org/auth/realms/opensky-network/protoc
 STATES_URL = "https://opensky-network.org/api/states/all"
 REQUEST_TIMEOUT = 10
 
-ISTANBUL_AIRPORT_COORDINATES = {"lamin": 40.27, "lomin": 27.73, "lamax": 42.27, "lomax": 29.73}
-
+GEORGIAN_AIRPORT_COORDINATES = {"lamin": 40.67, "lomin": 43.95, "lamax": 42.67, "lomax": 45.95}
 DB_HOST = _require_env_variable("DB_HOST")
 DB_PORT = int(_require_env_variable("DB_PORT"))
 DB_NAME = _require_env_variable("DB_NAME")
