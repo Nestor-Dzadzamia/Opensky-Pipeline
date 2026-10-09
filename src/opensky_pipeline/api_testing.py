@@ -41,5 +41,4 @@ def main() -> None:
     print(json.dumps(data.json(), indent=4))
 
 if __name__ == '__main__':
-
     main()
