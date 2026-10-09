@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-opensky-pipeline = "opensky_pipeline:main"
+opensky-pipeline = "opensky_pipeline.main:main"
 opensky-init-db = "opensky_pipeline.db:init_db"
 
 [build-system]
