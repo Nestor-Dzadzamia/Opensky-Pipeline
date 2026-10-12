@@ -31,8 +31,6 @@ def init_db() -> None:
     schema_sql = SCHEMA_PATH.read_text()
     with connect_to_db() as conn:
         conn.execute(cast(LiteralString,schema_sql))
-    print("schema initialized") # aq dalogva unda amis
-
 
 def insert_data(rows: list[dict]) -> int:
     if not rows:
