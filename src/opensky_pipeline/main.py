@@ -4,7 +4,7 @@ import sys
 import psycopg2
 from httpx2 import HTTPStatusError, RequestError
 
-from opensky_pipeline.etl_pipeline import etl_pipeline
+from opensky_pipeline.etl_pipeline import etl_pipeline, run_etl_create_dashboard
 from opensky_pipeline.util.logger import logger
 from opensky_pipeline.util.logger import setup_logging_config
 
@@ -14,7 +14,7 @@ def main():
 
     logger.info("run started")
     try:
-        asyncio.run(etl_pipeline())
+        asyncio.run(run_etl_create_dashboard())
     except HTTPStatusError as e:
         status = e.response.status_code
         if status == 429:

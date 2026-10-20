@@ -14,7 +14,6 @@ class CoordinateBox(BaseModel):
 class Config(BaseSettings):
     model_config = SettingsConfigDict(
         env_file= PROJECT_ROOT / '.env',
-        env_ignore_empty=True,
         extra="ignore",
     )
 
@@ -34,3 +33,10 @@ class Config(BaseSettings):
     GEORGIAN_AIRPORT_COORDINATES: CoordinateBox = CoordinateBox(
         lamin=40.67, lomin=43.95, lamax=42.67, lomax=45.95
     )
+
+    GRAFANA_TOKEN: SecretStr
+    GRAFANA_URL: str = "http://localhost:3000"
+
+
+    DASHBOARDS_PATH: str = "/apis/dashboard.grafana.app/v2/namespaces/default/dashboards"
+    DASHBOARD_FILE: Path = Path(__file__).parent / "grafana" / "tbilisi_airport_tracker.json"
