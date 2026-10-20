@@ -25,6 +25,9 @@ The bounding box is 1 degree in every direction around Tbilisi International Air
 | latitude | 40.67 | 42.67 |
 | longitude | 43.95 | 45.95 |
 
+<img width="1428" height="866" alt="image" src="https://github.com/user-attachments/assets/5799c92c-2050-4a2b-9e93-f2b517ca8b2a" />
+
+
 That's 4 square degrees, well under the 25 sq° limit, so every call costs 1 API credit.
 
 Fair warning: Tbilisi is not a huge hub, and OpenSky depends on volunteer receivers, which are sparse in the Caucasus. A typical call returns somewhere between 3 and 16 aircraft. Most of them are flights crossing Georgia between Europe and Asia at cruising altitude, plus whatever is landing at or leaving TBS. A box over Frankfurt or Istanbul would give a lot more rows. Switching is just a matter of changing the coordinates in `config.py`.
